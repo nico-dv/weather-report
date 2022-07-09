@@ -27,12 +27,12 @@ def lambda_handler(event, context):
             sns.publish(TopicArn=topic_arn, 
             Message="Today is going to rain. :( Don't forget to bring an umbrella!", 
             Subject="Daily Weather Report")
-            break 
+             
         else:
             sns.publish(TopicArn=os.getenv('topic_arn'), 
             Message="Today's weather is going to be sunny! Enjoy =D", 
             Subject="Daily Weather Report")
-             break    
+                 
                       
    
    
